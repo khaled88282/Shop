@@ -1612,8 +1612,8 @@ function renderSuppliers() {
 
     const phone = (s.whatsapp || s.phone || '').replace(/\s/g,'');
     const waMsg = encodeURIComponent(
-      const dateStr = new Date().toLocaleDateString('en-GB'); const message = 
-      `আসসালামু আলাইকুম,\n\nতারিখ: ${dateStr}\n\n*${s.name}* সাপ্লায়ারের হিসাব:\n\n🛒 মোট কেনা: AED ${totalPurchase.toFixed(2)}\n✅ মোট দেওয়া হয়েছে: AED ${totalPaid.toFixed(2)}\n⚠️ বাকি আছে: *AED ${bal.toFixed(2)}*\n\n---\nDear ${s.name},\n\nDate: ${dateStr}\n\nTotal Purchase: AED ${totalPurchase.toFixed(2)}\nTotal Paid: AED ${totalPaid.toFixed(2)}\nOutstanding Balance: *AED ${bal.toFixed(2)}*\n\nAbdun Nur Grocery, Dubai`;
+      `আসসালামু আলাইকুম,\n\n*${s.name}* সাপ্লায়ারের হিসাব:\n\n🛒 মোট কেনা: AED ${totalPurchase.toFixed(2)}\n✅ মোট দেওয়া হয়েছে: AED ${totalPaid.toFixed(2)}\n⚠️ বাকি আছে: *AED ${bal.toFixed(2)}*\n\n---\nDear ${s.name},\nTotal Purchase: AED ${totalPurchase.toFixed(2)}\nTotal Paid: AED ${totalPaid.toFixed(2)}\nOutstanding Balance: *AED ${bal.toFixed(2)}*\n\nAbdun Nur Grocery, Dubai`
+    );
     const waLink = phone ? `https://wa.me/971${phone.replace(/^0/,'')}?text=${waMsg}` : '#';
 
     return `<div class="supplier-card">
